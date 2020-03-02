@@ -57,7 +57,7 @@ const routes = [
     path: '/content/:blogid',
     name: 'content',
     components: {
-      leftmenu:LeftMenu,
+      leftmenu:'',
       header:Header,
       main:Content
     }

@@ -23,7 +23,7 @@
                     console.log(marked(response.data.blogcontent));
                     this.blogcontent=marked(response.data.blogcontent);
                     this.$nextTick(()=>{
-                        const  block=document.querySelectorAll('code');
+                        const  block=document.querySelectorAll('pre code');
                         block.forEach(block=>{
                             hljs.highlightBlock(block);
                         })
