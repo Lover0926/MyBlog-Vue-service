@@ -34,7 +34,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-    import marked from 'marked'
     // 导入组件 及 组件样式
     import { mavonEditor } from 'mavon-editor'
     import 'mavon-editor/dist/css/index.css'
@@ -97,6 +96,7 @@
                     alert("文章主题不能为空！")
                     return;
                 }else if (this.blog.listname==""){
+
                     alert("标签不能为空！")
                     return;
                 }
@@ -104,6 +104,7 @@
                 const  _this = this
                         axios.post('http://localhost:8181/writeBlog/addBlog',this.blog).then(function (resp) {
                            if(resp.data=="success") {
+
                                _this.$alert('发布成功！', '消息提示', {
                                    confirmButtonText: '确定',
                                    callback: action => {
